@@ -1,0 +1,65 @@
+{
+  "name": "ScoreDekh",
+  "productName": "ScoreDekh",
+  "version": "1.0.0",
+  "description": "Desktop application to get notified of IPL scores",
+  "main": "main.js",
+  "buildWin": "electron-packager AppDir AppName --platform=win32 --arch=ia32 --electronVersion=1.4.13 --app-version=1.0.0 --build-version=2.0.0 --icon=./assets/favicon.ico --prune=false --overwrite=true && electron ./package.js",
+  "scripts": {
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make",
+    "publish": "electron-forge publish",
+    "buildWin": "electron-packager . IPL --platform=win32 --arch=ia32  --app-version=1.0.0 --build-version=2.0.0 --prune=false --overwrite=true && electron ./package.js",
+
+    "lint": "echo \"No linting configured\""
+  },
+  "keywords": [],
+  "author": "Tara Shankar",
+  "license": "MIT",
+  "config": {
+    "forge": {
+      "packagerConfig": {},
+      "makers": [
+        {
+          "name": "@electron-forge/maker-squirrel",
+          "config": {
+            "name": "my_app"
+          }
+        },
+        {
+          "name": "@electron-forge/maker-zip",
+          "platforms": [
+            "darwin"
+          ]
+        },
+        {
+          "name": "@electron-forge/maker-deb",
+          "config": {}
+        },
+        {
+          "name": "@electron-forge/maker-rpm",
+          "config": {}
+        }
+      ]
+    }
+  },
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.3",
+    "electron-squirrel-startup": "^1.0.0",
+    "opn": "^6.0.0",
+    "path": "^0.12.7",
+    "request": "^2.88.0",
+    "node-notifier": "^5.4.0",
+    "request-promise": "^4.2.4"
+  },
+  "devDependencies": {
+    "@electron-forge/cli": "6.0.0-beta.34",
+    "@electron-forge/maker-deb": "6.0.0-beta.34",
+    "@electron-forge/maker-rpm": "6.0.0-beta.34",
+    "@electron-forge/maker-squirrel": "6.0.0-beta.34",
+    "@electron-forge/maker-zip": "6.0.0-beta.34",
+    "electron": "4.1.4",
+    "electron-winstaller": "^3.0.4"
+  }
+}
