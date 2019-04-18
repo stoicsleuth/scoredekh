@@ -42,6 +42,12 @@ Run/start the application locally using
 ```
 npm start
 ```
+## Screenshots
+
+
+![Screenshot](https://i.ibb.co/w7LPgzq/Screenshot-2019-04-18-21-33-25-2.png)
+
+![Screenshot](https://i.ibb.co/ynb03gQ/Screenshot-2019-04-18-21-33-52.png)
 
 ## Bonus
 
